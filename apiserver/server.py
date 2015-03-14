@@ -13,8 +13,11 @@ resources = {}
 
 def newRequest(env, start_response):
   if env['PATH_INFO'].startswith('/datasets'):
-    start_response('500 Not yet implemented', [('Content-type','text/plain')])
-    return ['Hello there! The feature you are looking for has not yet been implemented']
+    start_response('200 OK', [('Content-Type', 'application/json')])
+    return [ rawdatasets.makejson({"alldatasets":rawdatasets.rawdatasets}) ]
+
+   # start_response('500 Not yet implemented', [('Content-type','text/plain')])
+   # return ['Hello there! The feature you are looking for has not yet been implemented']
 
   path = env['PATH_INFO'].lower()
 

@@ -5,7 +5,11 @@ import json
 import mongodb
 
 rawdatasets = [
-  'hav-viss-grundvatten'
+  'hav-viss-grundvatten',
+  'smhi-wetlands',
+  'ivl-sot-statistik',
+  'ivl-dvst_pah_gd',
+  'ivl-dvslufar'
 ]
 
 def makejson(o):

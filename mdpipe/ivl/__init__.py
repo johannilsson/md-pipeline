@@ -26,11 +26,6 @@ datasets = [
         'source': 'ivl-dvslufar',
         'url': 'http://www3.ivl.se/db/plsql/dvslufar$b1.querylist'
     },
-    {
-        'name': 'Årsmedelhalter i luft',
-        'source': 'ivl-dvslufar',
-        'url': 'http://www3.ivl.se/db/plsql/dvslufar$b1.querylist'
-    },
 ]
 
 
