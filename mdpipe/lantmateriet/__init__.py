@@ -10,7 +10,7 @@ def to_geojson_feature(shape, record):
         geometry=geo_interface_sweref_to_wgs84(shape.__geo_interface__),
         properties={
             'Municipality': as_utf8(record[3].decode('latin-1')),
-            'Area': as_utf8(record[5].decode('latin-1'))
+            'County': as_utf8(record[5].decode('latin-1'))
         }
     )
     return f

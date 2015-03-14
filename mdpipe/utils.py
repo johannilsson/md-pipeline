@@ -1,6 +1,5 @@
 # -*- coding:utf-8 -*-
 
-
 def as_utf8(s):
     """ Ensure utf-8 for the provided s """
     try:
