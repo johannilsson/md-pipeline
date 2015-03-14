@@ -18,3 +18,13 @@ def get_mongo():
 def add_update_municipality(source):
     conn = get_mongo()
     conn.municipalitymap.update({'_id': source['id']}, source, upsert=True)
+
+
+def add_update_source(source):
+    conn = get_mongo()
+    conn.source.update({'_id': source['id']}, source, upsert=True)
+
+
+def insert_rawobjects(raw_obj):
+    conn = get_mongo()
+    conn.rawobjects.insert(raw_obj, upsert=True)

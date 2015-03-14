@@ -1,3 +1,7 @@
+beautifulsoup4==4.3.2
 geojson==1.0.9
+jdcal==1.0
+openpyxl==2.2.0
 pymongo==2.8
 pyshp==1.2.1
+requests==2.6.0
