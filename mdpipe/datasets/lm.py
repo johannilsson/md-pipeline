@@ -1,7 +1,11 @@
 # -*- coding:utf-8 -*-
-from geojson import Feature, Polygon
+from geojson import Feature
+from mdpipe.add import add_update_municipality
+from mdpipe.shapes import shape_to_feature
 from mdpipe.utils import as_utf8
-from mdpipe.geo import sweref99tm_to_wgs84, rt90_to_wgs84
+from mdpipe.geo import sweref99tm_to_wgs84
+
+__author__ = 'johan'
 
 
 def to_geojson_feature(shape, record):
@@ -28,3 +32,11 @@ def geo_interface_sweref_to_wgs84(geo_interface):
 
     geo_interface['coordinates'] = tuple(n_coords)
     return geo_interface
+
+
+def process():
+    for feature in shape_to_feature(
+            "./sve_1milj_sh_99TM/svk/riks/ak_riks.shp",
+            "./sve_1milj_sh_99TM/svk/riks/ak_riks.dbf",
+            to_geojson_feature):
+        add_update_municipality(feature)
